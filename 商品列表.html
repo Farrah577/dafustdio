@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta content="text/html; charset=UTF-8">
+<title>大福工作室</title>
+<!-- 导入 BootStrap CSS -->
+<link rel="stylesheet" href="http://localhost:/Web_meiTuan/css/bootstrap.min.css">
+<!-- 导入 SweetAlert2 库 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<style>
+/* 按钮 添加 */
+.fileinput-button {
+	position: relative;
+	display: inline-block;
+	background: rgba(105, 105, 105, 0.7); /* 背景色、透明度 */
+	border: 1px solid rgba(23, 23, 23, 0.4); /* 鼠标悬浮时，边框样式 */
+	border-radius: 20px; /* 圆角半径 */
+	padding: 1px 30px; /* 边距：高度、宽度 */
+	overflow: hidden;
+	color: white;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+	font-size: 20px;
+}
+</style>
+<body>
+	<div align="center">
+
+		<!-- 【自定义 商品 列表】 -->
+		<div>
+			<!-- 第1行 商品 -->
+			<div style="display: table; border-spacing: 30px;">
+				<!-- 商品1 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p1.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">10元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+				<!-- 商品2 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p2.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">15元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+				<!-- 商品3 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p3.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">12元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+				<!-- 商品4 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p4.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">18元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 第2行 商品 -->
+			<div style="display: table; border-spacing: 30px;">
+				<!-- 商品5 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p5.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">14元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+				<!-- 商品6 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p6.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">20元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+				<!-- 商品7 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p7.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+						</div>
+						<!-- 价格 -->
+                        
+						<div style="margin-top: 1px">
+							<label style="color: #696969">16元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+				<!-- 商品8 -->
+				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
+					<!-- 图片 -->
+					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p8.png">
+					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
+						<!-- 商品名称 -->
+						<div style="height: 5px;"></div>
+						<div>
+							<label style="font-size: 20px">商品名称</label>
+							</div>
+						<!-- 价格 -->
+						<div style="margin-top: 1px">
+							<label style="color: #696969">25元</label>
+						</div>
+						<!-- 添加 -->
+						<div style="margin-top: 1px">
+							<input type="button" value="+" class="fileinput-button">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ... 更多商品行 ... -->
+		</div>
+		<!-- 选好了按钮 -->
+		<div style="margin-top: 30px; margin-bottom: 100px;">
+			<input type="submit" class="btn fileinput-button" value="选好了" onclick="ok();" style="width: 200px; height: 70px">
+		</div>
+	</div>
+</body>
+
+<script>
+	function ok() {
+		Swal.fire({
+			title: "客服联系方式：",
+			text: "QQ：850747737\nwx：Wang6661321\n工作室已收到您的需求，稍后将会联系您~",
+			icon: "success",
+			confirmButtonText: "确定"
+		});
+	}
+</script>
+</html>
