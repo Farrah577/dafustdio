@@ -225,20 +225,29 @@ body {
         });
     }
 
-    // 添加一个点击事件监听器，当按钮被点击时触发
     const detailButtons = document.querySelectorAll('.fileinput-button');
     detailButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // 获取对应商品的信息，例如图片、描述等
-            const productImage = this.closest('.product-card').querySelector('img').src;
-            const productName = this.closest('.product-card').querySelector('.product-name').textContent;
-            const productPrice = this.closest('.product-card').querySelector('.product-price').textContent;
-            const notes = "这里是一些注意事项...";
-            
-            // 调用新定义的函数来显示商品详情弹窗
-            showProductDetails(productName, productPrice, productImage, notes);
+            const productCard = this.closest('.product-card');
+            if (productCard) {
+                const productImage = productCard.querySelector('img').src;
+                const productName = productCard.querySelector('.product-name').textContent;
+                const productPrice = productCard.querySelector('.product-price').textContent;
+                const notes = "这里是一些注意事项...";
+                
+                showProductDetails(productName, productPrice, productImage, notes);
+            }
         });
     });
 
+
+    function ok() {
+    Swal.fire({
+        title: "客服联系方式：",
+        html: "QQ：960798516<br>wx：Wang960798516<br>扫码付款时请注意备注好个人信息！！！<br>（商品内容*数量+个人联系方式）！！！<br>工作室收到您的需求后将会联系您~",
+        icon: "success",
+        confirmButtonText: "确定"
+    }); 
+}
 </script>
 </html>
