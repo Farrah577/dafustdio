@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta content="text/html; charset=UTF-8">
 <title>大福工作室</title>
-<!-- 导入 BootStrap CSS -->
+<!-- 导入 Bootstrap CSS -->
 <link rel="stylesheet" href="http://localhost:/Web_meiTuan/css/bootstrap.min.css">
 <!-- 导入 SweetAlert2 库 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -12,207 +13,232 @@
 .fileinput-button {
 	position: relative;
 	display: inline-block;
-	background: rgba(105, 105, 105, 0.7); /* 背景色、透明度 */
-	border: 1px solid rgba(23, 23, 23, 0.4); /* 鼠标悬浮时，边框样式 */
-	border-radius: 20px; /* 圆角半径 */
-	padding: 1px 30px; /* 边距：高度、宽度 */
+	background: #FF6C00; /* 修改按钮颜色 */
+	border: none;
+	border-radius: 20px;
+	padding: 10px 30px;
 	overflow: hidden;
 	color: white;
 	text-decoration: none;
 	text-indent: 0;
 	line-height: 20px;
 	font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* 增加过渡效果 */
 }
+
+.fileinput-button:hover {
+	background: #FF8900; /* 鼠标悬停时的颜色 */
+}
+
+/* 主页背景颜色 */
+body {
+    background-color: #F8F8F8; /* 修改背景颜色 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #FFD700; /* 欢迎弹窗背景颜色 */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message img {
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.product-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    width: 200px;
+    height: 350px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.product-price {
+    color: #696969;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    color: red; /* 设置红色文本颜色 */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px; /* 设置字体大小 */
+}
+
 </style>
 <body>
-	<div align="center">
-
-		<!-- 【自定义 商品 列表】 -->
-		<div>
-			<!-- 第1行 商品 -->
-			<div style="display: table; border-spacing: 30px;">
-				<!-- 商品1 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p1.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">10元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-				<!-- 商品2 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p2.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">15元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-				<!-- 商品3 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p3.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">12元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-				<!-- 商品4 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p4.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">18元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- 第2行 商品 -->
-			<div style="display: table; border-spacing: 30px;">
-				<!-- 商品5 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p5.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">14元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-				<!-- 商品6 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p6.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">20元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-				<!-- 商品7 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p7.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-						</div>
-						<!-- 价格 -->
-                        
-						<div style="margin-top: 1px">
-							<label style="color: #696969">16元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-				<!-- 商品8 -->
-				<div style="width: 200px; height: 300px; background-color: #DCDCDC; display: table-cell;">
-					<!-- 图片 -->
-					<img style="width: 200px; height: 200px" src="http://localhost/Web_meiTuan/img/p8.png">
-					<div style="width: 100%; height: 100px; background-color: #F6F6F6; text-align: center;">
-						<!-- 商品名称 -->
-						<div style="height: 5px;"></div>
-						<div>
-							<label style="font-size: 20px">商品名称</label>
-							</div>
-						<!-- 价格 -->
-						<div style="margin-top: 1px">
-							<label style="color: #696969">25元</label>
-						</div>
-						<!-- 添加 -->
-						<div style="margin-top: 1px">
-							<input type="button" value="+" class="fileinput-button">
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ... 更多商品行 ... -->
+    <div class="container">
+        <div class="welcome-message">
+            <h1>欢迎来到大福工作室</h1>
+            <p>本工作室主旨为大学生们提供便捷服务，包括低价充话费、代写文章、讲解程序设计题等等服务，欢迎来选购~</p>
+            <img src="https://img1.imgtp.com/2023/08/21/l4BRZSFL.png">
+        </div>
+        <div class="product-list">
+            <!-- 商品卡片1 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/hPTGGQVZ/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">程序题<br>（可供源码+讲解）</div>
+                    <div class="product-price">5元起</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片2 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">程序设计定制</div>
+                    <div class="product-price">100起（按照程序定制价格）</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+			<!-- 商品卡片3 -->
+            <div class="product-card">
+                <img src="http://localhost/Web_meiTuan/img/p3.png">
+                <div class="product-details">
+                    <div class="product-name">刷网课</div>
+                    <div class="product-price">10元一科</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+			<!-- 商品卡片4 -->
+            <div class="product-card">
+                <img src="http://localhost/Web_meiTuan/img/p4.png">
+                <div class="product-details">
+                    <div class="product-name">商品名称</div>
+                    <div class="product-price">111元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+			<!-- 商品卡片5 -->
+            <div class="product-card">
+                <img src="http://localhost/Web_meiTuan/img/p5.png">
+                <div class="product-details">
+                    <div class="product-name">商品名称</div>
+                    <div class="product-price">12元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+			<!-- 商品卡片6 -->
+            <div class="product-card">
+                <img src="http://localhost/Web_meiTuan/img/p6.png">
+                <div class="product-details">
+                    <div class="product-name">商品名称</div>
+                    <div class="product-price">12元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+			<!-- 商品卡片7 -->
+            <div class="product-card">
+                <img src="http://localhost/Web_meiTuan/img/p7.png">
+                <div class="product-details">
+                    <div class="product-name">商品名称</div>
+                    <div class="product-price">12元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+			<!-- 商品卡片8 -->
+            <div class="product-card">
+                <img src="http://localhost/Web_meiTuan/img/p8.png">
+                <div class="product-details">
+                    <div class="product-name">商品名称</div>
+                    <div class="product-price">12元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- ... 更多商品卡片 ... -->
 		</div>
-		<!-- 选好了按钮 -->
-		<div style="margin-top: 30px; margin-bottom: 100px;">
-			<input type="submit" class="btn fileinput-button" value="选好了" onclick="ok();" style="width: 200px; height: 70px">
-		</div>
-	</div>
+        <div class="contact-info">
+            <h4>客服联系方式：QQ（960798516） wx（Wang960798516）</h4>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <input type="submit" class="btn fileinput-button" value="下单" onclick="ok();">
+        </div>
+    </div>
 </body>
 
 <script>
-	function ok() {
-		Swal.fire({
-			title: "客服联系方式：",
-			text: "QQ：850747737\nwx：Wang6661321\n工作室已收到您的需求，稍后将会联系您~",
-			icon: "success",
-			confirmButtonText: "确定"
-		});
-	}
+    window.onload = function() {
+        Swal.fire({
+            title: "欢迎来到大福工作室",
+            text: "本工作室主旨为大学生们提供便捷服务，内涵低价充话费，代写文章，讲解程序设计题等等服务，欢迎来选购~",
+            imageUrl: "https://img1.imgtp.com/2023/08/21/l4BRZSFL.png",
+            imageWidth: 200,
+            imageHeight: 250,
+            imageAlt: "欢迎图片",
+            confirmButtonText: "确认"
+        });
+    };
+
+    function showProductDetails(productName, productPrice, productImage, notes) {
+        Swal.fire({
+            title: productName,
+            html: `
+                <img src="${productImage}" style="max-width: 100%; height: auto;">
+                <p>价格：${productPrice}</p>
+                <p>${notes}</p>
+            `,
+            confirmButtonText: "返回",
+            confirmButtonColor: '#3085d6'
+        });
+    }
+
+    // 添加一个点击事件监听器，当按钮被点击时触发
+    const detailButtons = document.querySelectorAll('.fileinput-button');
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 获取对应商品的信息，例如图片、描述等
+            const productImage = this.closest('.product-card').querySelector('img').src;
+            const productName = this.closest('.product-card').querySelector('.product-name').textContent;
+            const productPrice = this.closest('.product-card').querySelector('.product-price').textContent;
+            const notes = "这里是一些注意事项...";
+            
+            // 调用新定义的函数来显示商品详情弹窗
+            showProductDetails(productName, productPrice, productImage, notes);
+        });
+    });
+
 </script>
 </html>
