@@ -3,17 +3,14 @@
 <head>
 <meta content="text/html; charset=UTF-8">
 <title>大福工作室</title>
-<!-- 导入 Bootstrap CSS -->
 <link rel="stylesheet" href="http://localhost:/Web_meiTuan/css/bootstrap.min.css">
-<!-- 导入 SweetAlert2 库 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
 <style>
 /* 按钮 添加 */
 .fileinput-button {
 	position: relative;
 	display: inline-block;
-	background: #FF6C00; /* 修改按钮颜色 */
+	background: #FF6C00;
 	border: none;
 	border-radius: 20px;
 	padding: 10px 30px;
@@ -24,16 +21,16 @@
 	line-height: 20px;
 	font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s; /* 增加过渡效果 */
+    transition: background-color 0.3s;
 }
 
 .fileinput-button:hover {
-	background: #FF8900; /* 鼠标悬停时的颜色 */
+	background: #FF8900;
 }
 
 /* 主页背景颜色 */
 body {
-    background-color: #F8F8F8; /* 修改背景颜色 */
+    background-color: #F8F8F8;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -49,7 +46,7 @@ body {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
-    background-color: #FFD700; /* 欢迎弹窗背景颜色 */
+    background-color: #FFD700;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -101,13 +98,14 @@ body {
 }
 
 .contact-info {
-    color: red; /* 设置红色文本颜色 */
+    color: red;
     text-align: center;
     margin-top: 20px;
-    font-size: 18px; /* 设置字体大小 */
+    font-size: 18px;
 }
 
 </style>
+</head>
 <body>
     <div class="container">
         <div class="welcome-message">
@@ -116,12 +114,21 @@ body {
             <img src="https://img1.imgtp.com/2023/08/21/l4BRZSFL.png">
         </div>
         <div class="product-list">
+            <!-- 商品卡片 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">招代理！可赚取大量生活费！</div>
+                    <div class="product-price">999999元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
             <!-- 商品卡片1 -->
             <div class="product-card">
                 <img src="https://i.postimg.cc/hPTGGQVZ/image.jpg">
                 <div class="product-details">
                     <div class="product-name">程序题<br>（可供源码+讲解）</div>
-                    <div class="product-price">5元起</div>
+                    <div class="product-price">5-100元</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
@@ -130,66 +137,330 @@ body {
                 <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
                     <div class="product-name">程序设计定制</div>
-                    <div class="product-price">100起（按照程序定制价格）</div>
+                    <div class="product-price">10起（按照程序定制价格）</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-			<!-- 商品卡片3 -->
+            <!-- 商品卡片3 -->
             <div class="product-card">
-                <img src="http://localhost/Web_meiTuan/img/p3.png">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
-                    <div class="product-name">刷网课</div>
-                    <div class="product-price">10元一科</div>
+                    <div class="product-name">刷课</div>
+                    <div class="product-price">8-10元<br>越多越便宜</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-			<!-- 商品卡片4 -->
+            <!-- 商品卡片4 -->
             <div class="product-card">
-                <img src="http://localhost/Web_meiTuan/img/p4.png">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
-                    <div class="product-name">商品名称</div>
-                    <div class="product-price">111元</div>
+                    <div class="product-name">代写文章</div>
+                    <div class="product-price">5-50元<br>按文章类型字数定价</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-			<!-- 商品卡片5 -->
+            <!-- 商品卡片6 -->
             <div class="product-card">
-                <img src="http://localhost/Web_meiTuan/img/p5.png">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
-                    <div class="product-name">商品名称</div>
-                    <div class="product-price">12元</div>
+                    <div class="product-name">蛋仔派对：12赛季高级手册</div>
+                    <div class="product-price">27元</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-			<!-- 商品卡片6 -->
+            <!-- 商品卡片7 -->
             <div class="product-card">
-                <img src="http://localhost/Web_meiTuan/img/p6.png">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
-                    <div class="product-name">商品名称</div>
-                    <div class="product-price">12元</div>
+                    <div class="product-name">12赛季高级手册（进阶版升级包）</div>
+                    <div class="product-price">27元</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-			<!-- 商品卡片7 -->
+            <!-- 商品卡片8 -->
             <div class="product-card">
-                <img src="http://localhost/Web_meiTuan/img/p7.png">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
-                    <div class="product-name">商品名称</div>
-                    <div class="product-price">12元</div>
+                    <div class="product-name">蛋仔派对：12赛季高级手册（进阶版）</div>
+                    <div class="product-price">54元</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-			<!-- 商品卡片8 -->
+            <!-- 商品卡片9 -->
             <div class="product-card">
-                <img src="http://localhost/Web_meiTuan/img/p8.png">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
                 <div class="product-details">
-                    <div class="product-name">商品名称</div>
-                    <div class="product-price">12元</div>
+                    <div class="product-name">蛋仔派对：盲盒染色剂</div>
+                    <div class="product-price">1.6元</div>
                     <input type="button" value="详情" class="fileinput-button">
                 </div>
             </div>
-            <!-- ... 更多商品卡片 ... -->
-		</div>
+            <!-- 商品卡片10 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：虎皮卷大灰狼</div>
+                    <div class="product-price">64元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片11 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：房间卡</div>
+                    <div class="product-price">1.8元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片12 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：改名卡</div>
+                    <div class="product-price">14.4元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片13 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：胡桃可露丽</div>
+                    <div class="product-price">64元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片14 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：吼吼</div>
+                    <div class="product-price">64元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片15 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：嗷嗷</div>
+                    <div class="product-price">64元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片16 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：僵尸博士</div>
+                    <div class="product-price">64元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片17 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：太阳花灿灿</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片18 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：绒绒小红狐</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片19 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：小黄鸡雨衣</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片20 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：红果小浣熊</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片21 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：万圣南小瓜</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片22 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：月球兔</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片23 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：水蜜桃</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片24 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：锤头鲨</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片25 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：奶油樱</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片26 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：像素眼镜</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片27 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：充气锤</div>
+                    <div class="product-price">20元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片28 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：阳光脏辫发带</div>
+                    <div class="product-price">14.4元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <!-- 商品卡片29 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：阳光上装</div>
+                    <div class="product-price">14.4元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <!-- 商品卡片30 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：阳光下装</div>
+                    <div class="product-price">14.4元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：阳光套装</div>
+                    <div class="product-price">14.4元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：顽皮小丑鱼</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：冰激凌企鹅</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：圣诞小星星</div>
+                    <div class="product-price">32元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔派对：六角恐龙</div>
+                    <div class="product-price">18元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片31 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">王者荣耀95折点卷</div>
+                    <div class="product-price">0.95元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片32 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">和平精英95折点卷</div>
+                    <div class="product-price">0.95元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片33 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">话费充值96折</div>
+                    <div class="product-price">96元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            
+            <!-- ... 其他商品卡片 ... -->
+        </div>
         <div class="contact-info">
             <h4>客服联系方式：QQ（960798516） wx（Wang960798516）</h4>
         </div>
@@ -198,7 +469,7 @@ body {
         </div>
     </div>
 </body>
-
+</html>
 <script>
     window.onload = function() {
         Swal.fire({
@@ -233,21 +504,52 @@ body {
                 const productImage = productCard.querySelector('img').src;
                 const productName = productCard.querySelector('.product-name').textContent;
                 const productPrice = productCard.querySelector('.product-price').textContent;
-                const notes = "这里是一些注意事项...";
-                
+                let notes = "这里是一些注意事项...";
+
+                // 添加根据商品不同显示不同的注意事项
+                if (productName.includes("程序题")) {
+                    notes = "依照程序类型，题目难易进行定价。";
+                } else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }
+
                 showProductDetails(productName, productPrice, productImage, notes);
             }
         });
     });
 
-
     function ok() {
-    Swal.fire({
-        title: "客服联系方式：",
-        html: "QQ：960798516<br>wx：Wang960798516<br>扫码付款时请注意备注好个人信息！！！<br>（商品内容*数量+个人联系方式）！！！<br>工作室收到您的需求后将会联系您~",
-        icon: "success",
-        confirmButtonText: "确定"
-    }); 
-}
+        Swal.fire({
+            title: "客服联系方式：",
+            html: "QQ：960798516<br>wx：Wang960798516<br>扫码付款时请注意备注好个人信息！！！<br>（商品内容*数量+个人联系方式）！！！<br>工作室收到您的需求后将会联系您~",
+            icon: "success",
+            confirmButtonText: "确定"
+        }); 
+    }
 </script>
-</html>
