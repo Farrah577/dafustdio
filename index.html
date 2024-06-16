@@ -1,302 +1,950 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-<meta content="text/html; charset=UTF-8">
-<title>大福工作室</title>
-<link rel="stylesheet" href="http://localhost:/Web_meiTuan/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<style>
-/* 按钮 添加 */
-.fileinput-button {
-	position: relative;
-	display: inline-block;
-	background: #FF6C00;
-	border: none;
-	border-radius: 20px;
-	padding: 10px 30px;
-	overflow: hidden;
-	color: white;
-	text-decoration: none;
-	text-indent: 0;
-	line-height: 20px;
-	font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+  <meta charset="utf-8">
 
-.fileinput-button:hover {
-	background: #FF8900;
-}
+  <title>大福工作室</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* 主页背景颜色 */
-body {
-    background-color: #F8F8F8;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
-.welcome-message {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #FFD700;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  <link rel="stylesheet" href="assets/css/slick.css">
 
-.welcome-message img {
-    width: 200px;
-    height: auto;
-    margin: 20px auto;
-}
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-.product-list {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+  <link rel="stylesheet" href="assets/css/LineIcons.css">
 
-.product-card {
-    width: 200px;
-    height: 350px;
-    background-color: #FFF;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
+  <link rel="stylesheet" href="assets/css/animate.css">
 
-.product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-.product-details {
-    padding: 10px;
-    text-align: center;
-}
+  <link rel="stylesheet" href="assets/css/default.css">
 
-.product-name {
-    font-size: 20px;
-    margin: 5px 0;
-}
-
-.product-price {
-    color: #696969;
-    margin-bottom: 10px;
-}
-
-.contact-info {
-    color: red;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="welcome-message">
-            <h1>欢迎来到大福工作室</h1>
-            <p>本工作室主旨为大学生们提供便捷服务，包括低价充话费、代写文章、讲解程序设计题等等服务，欢迎来选购~</p>
-            <img src="https://z1.ax1x.com/2023/11/07/pil2tOA.png"><!--工作室宣传图片 imgse图床-->>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+
+
+  <header class="header-area">
+    <div class="navbar-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <ul id="nav" class="navbar-nav m-auto">
+                  <li class="nav-item active">
+                    <a class="page-scroll" href="#home">首页</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="#service">服务</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="#about">关于</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="#portfolio">商品</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="#testimonial">客户</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="#blog">宣传</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-btn d-none d-sm-inline-block">
+                <a class="main-btn" data-scroll-nav="0" href="#pricing">下载</a>
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="product-list">
-            <!-- 招代理 -->
-            <div class="product-card">
-                <img src="https://img1.imgtp.com/2023/09/12/7hU3IOH5.png">
-                <div class="product-details">
-                    <div class="product-name">招代理！可赚取大量生活费！</div>
-                    <div class="product-price">1000元</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片1 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/hPTGGQVZ/image.jpg">
-                <div class="product-details">
-                    <div class="product-name">程序题<br>（可供源码+讲解）</div>
-                    <div class="product-price">5元起</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片2 -->
-            <div class="product-card">
-                <img src="https://img1.imgtp.com/2023/09/12/jZZhxjv5.png">
-                <div class="product-details">
-                    <div class="product-name">程序设计定制</div>
-                    <div class="product-price">10元起</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片3 -->
-            <div class="product-card">
-                <img src="https://img1.imgtp.com/2023/09/14/bOTtyYvN.jpg">
-                <div class="product-details">
-                    <div class="product-name">刷课</div>
-                    <div class="product-price">6元起<br>越多越便宜！</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片4 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
-                <div class="product-details">
-                    <div class="product-name">文章代笔</div>
-                    <div class="product-price">论文，演讲稿，应用文等<br>5元起</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片6 -->
-            <div class="product-card">
-                <img src="https://img1.imgtp.com/2023/09/12/zQQTfwJU.jpg">
-                <div class="product-details">
-                    <div class="product-name">蛋仔可赠道具衣服8折</div>
-                    <div class="product-price">1.6元起</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片7 -->
-            <div class="product-card">
-                <img src="https://img1.imgtp.com/2023/09/14/Cu9QXnKd.jpg">
-                <div class="product-details">
-                    <div class="product-name">蛋仔赛季手册9折</div>
-                    <div class="product-price">27元起</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片31 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
-                <div class="product-details">
-                    <div class="product-name">王者荣耀98折点卷</div>
-                    <div class="product-price">0.98元</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片32 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
-                <div class="product-details">
-                    <div class="product-name">和平精英98折点卷</div>
-                    <div class="product-price">0.98元</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            <!-- 商品卡片33 -->
-            <div class="product-card">
-                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
-                <div class="product-details">
-                    <div class="product-name">话费充值97折</div>
-                    <div class="product-price">97元</div>
-                    <input type="button" value="详情" class="fileinput-button">
-                </div>
-            </div>
-            
-            <!-- ... 其他商品卡片 ... -->
-        </div>
-        <div class="contact-info">
-            <h4>客服联系方式：QQ（960798516） wx（Wang960798516）</h4>
-        </div>
-        <div style="text-align: center; margin-top: 30px;">
-            <input type="submit" class="btn fileinput-button" value="去下单" onclick="ok();">
-        </div>
+      </div>
     </div>
+    <div id="home" class="header-hero bg_cover d-lg-flex align-items-center"
+      style="background-image: url(assets/images/header-hero.jpg)">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="header-hero-content">
+              <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">大福工作室</h1>
+              <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">我们致力于为大学生以及社会各界群体提供全面的IT技术支持和生活福利。无论是网站开发、软件编程，还是数据分析的IT领域，我们的专业团队都能提供高效、专业的技术指导和解决方案。除此之外，我们还提供各种生活福利，包括充话费折扣、充值游戏折扣，以及各大平台会员折扣等。我们的目标是帮助每一个人更好地理解和应用IT技术，同时享受到我们提供的生活福利，推动社会的数字化进程。</p>
+              <div class="header-play wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
+                <a class="play-btn video-popup" href="assets/images/dafu.mp4">了解更多<i
+                    class="lni-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-hero-image d-flex align-items-center wow fadeInRightBig" data-wow-duration="1s"
+        data-wow-delay="1.1s">
+        <div class="image">
+          <img src="assets/images/hero-image.png" alt="Hero Image">
+        </div>
+      </div>
+      <div class="header-shape">
+        <img src="assets/images/shape/header-shape.png" alt="shape">
+      </div>
+    </div>
+  </header>
+
+
+  <section id="service" class="service-area pt-90">
+    <div class="container">
+      <div class="service">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-lg-4 col-md-7">
+            <div class="single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <div class="services-shape"></div>
+              <div class="services-separator"></div>
+              <div class="services-items services-color-1 d-sm-flex">
+                <div class="services-icon">
+                  <i class="lni-layout"></i>
+                </div>
+                <div class="services-content media-body">
+                  <h5 class="title">程序设计开发&技术答疑</h5>
+                  <p class="text">我们提供全面的技术支持服务，包括但不限于网站开发、软件开发以及编程问题的解答。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-7">
+            <div class="single-services services-active wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="services-shape"></div>
+              <div class="services-separator"></div>
+              <div class="services-items services-color-2 d-sm-flex">
+                <div class="services-icon">
+                  <i class="lni-vector"></i>
+                </div>
+                <div class="services-content media-body">
+                  <h5 class="title">生活福利</h5>
+                  <p class="text">我们提供一系列的生活福利优惠，包括折扣话费充值，游戏折扣代充，以及各大平台会员优惠等。我们的目标是为您节省更多的费用，同时享受到更优质的服务。无论您是需要充值话费，还是购买游戏代充，或是各大平台会员等等，我们都能为您提供最优惠的价格和最便捷的服务。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-7">
+            <div class="single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+              <div class="services-shape"></div>
+              <div class="services-separator"></div>
+              <div class="services-items services-color-3 d-sm-flex">
+                <div class="services-icon">
+                  <i class="lni-blackboard"></i>
+                </div>
+                <div class="services-content media-body">
+                  <h5 class="title">考证辅导</h5>
+                  <p class="text">我们拥有一支具有丰富经验和专业知识的团队，可以为您的各考试提供全方位的辅导服务。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="about-area pt-110 pb-120">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="about-title text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <h6 class="welcome">欢迎</h6>
+              <h3 class="title"><span>了解</span> 大福工作室</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-image mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img src="assets/images/about.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
+              <h3 class="title">了解更多关于<br>我们和行业的信息</h3>
+              <ul class="about-line">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="text">大福工作室致力于为大学生以及社会各界群体提供全面的IT技术支持和生活福利。无论是网站开发、软件编程，还是数据分析的IT领域，我们的专业团队都能提供高效、专业的技术指导和解决方案。除此之外，我们还提供各种生活福利，包括充话费折扣、充值游戏折扣，以及各大平台会员折扣等。</p>
+              <div class="about-counter pt-20">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="single-counter counter-color-1 mt-30 d-flex">
+                      <div class="counter-shape">
+                        <span class="shape-1"></span>
+                        <span class="shape-2"></span>
+                      </div>
+                      <div class="counter-content media-body">
+                        <span class="counter-count"><span class="counter">350</span>+</span>
+                        <p class="text">客户</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="single-counter counter-color-2 mt-30 d-flex">
+                      <div class="counter-shape">
+                        <span class="shape-1"></span>
+                        <span class="shape-2"></span>
+                      </div>
+                      <div class="counter-content media-body">
+                        <span class="counter-count"><span class="counter">1720</span>+</span>
+                        <p class="text">完成的项目</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <section class="analysis-area pt-115 pb-120 bg_cover" style="background-image: url(assets/images/analysis.jpg)">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="analysis-title text-center pb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+              <h3 class="title">了解更多关于我们的数据</h3>
+            </div>
+          </div>
+        </div>
+        <div class="analysis-counter">
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                <span class="count"><span class="counter">1720</span><span class="plus">+</span></span>
+                <p class="text">完成的项目</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <span class="count"><span class="counter">98</span><span class="plus">%</span></span>
+                <p class="text">客户满意度</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                <span class="count"><span class="counter">20</span><span class="plus">+</span></span>
+                <p class="text">员工人数</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                <span class="count"><span class="counter">7</span><span class="plus">+</span></span>
+                <p class="text">IT专家</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="project-masonry-area pt-115 pb-120">
+      <div class="container">
+          <div class="row align-items-end">
+              <div class="col-lg-4">
+                  <div class="section-title pb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                      <h6 class="sub-title">服务介绍</h6>
+                      <h4 class="title">IT&<span>生活</span></h4>
+                  </div>
+              </div>
+              <div class="col-lg-8">
+                  <div class="project-menu text-center text-sm-left text-lg-right pb-20 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                      <ul>
+                          <li class="active" data-filter="*">全部</li>
+                          <li data-filter=".apps">软件</li>
+                          <li data-filter=".branding">网站</li>
+                          <li data-filter=".creative">IT辅导</li>
+                          <li data-filter=".laptop">生活福利</li>
+                          <li data-filter=".product">优惠活动</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="row grid">
+              <!-- 软件部分 -->
+              <div class="col-lg-4 col-sm-6 grid-item apps">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/软件1.webp" alt="软件">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/软件1.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item apps">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/软件2.webp" alt="软件">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/软件2.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item apps">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/软件3.webp" alt="软件">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/软件3.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item apps">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/软件4.webp" alt="软件">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/软件4.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- 网站部分 -->
+              <div class="col-lg-4 col-sm-6 grid-item branding">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/网站1.webp" alt="网站">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/网站1.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item branding">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/网站2.webp" alt="网站">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/网站2.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item branding">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/网站3.webp" alt="网站">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/网站3.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item branding">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/网站4.webp" alt="网站">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/网站4.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- IT辅导部分 -->
+              <div class="col-lg-4 col-sm-6 grid-item creative">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/IT辅导1.webp" alt="IT辅导">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/IT辅导1.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item creative">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/IT辅导2.webp" alt="IT辅导">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/IT辅导2.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item creative">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/IT辅导3.webp" alt="IT辅导">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/IT辅导3.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item creative">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/IT辅导4.webp" alt="IT辅导">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/IT辅导4.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- 生活福利部分 -->
+              <div class="col-lg-4 col-sm-6 grid-item laptop">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/生活福利1.webp" alt="生活福利">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/生活福利1.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item laptop">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/生活福利2.webp" alt="生活福利">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/生活福利2.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item laptop">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/生活福利3.webp" alt="生活福利">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/生活福利3.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item laptop">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/生活福利4.webp" alt="生活福利">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/生活福利4.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item laptop">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/生活福利5.webp" alt="生活福利">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/生活福利5.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item laptop">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/生活福利6.webp" alt="生活福利">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/生活福利6.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- 优惠活动部分 -->
+              <div class="col-lg-4 col-sm-6 grid-item product">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/优惠活动1.webp" alt="优惠活动">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/优惠活动1.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item product">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/优惠活动2.webp" alt="优惠活动">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/优惠活动2.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 grid-item product">
+                  <div class="single-project gallery-masonry mt-30">
+                      <div class="project-image">
+                          <img src="assets/images/优惠活动3.webp" alt="优惠活动">
+                      </div>
+                      <div class="project-content">
+                          <a class="image-popup" href="assets/images/优惠活动3.webp"><span></span></a>
+                          <div class="project-title">
+                              <h4 class="title">查看</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="project-btn mt-60 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                      <a class="main-btn" href="#">立即下单</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+  <section id="app" class="app-download-area bg_cover pt-110 pb-120"
+    style="background-image: url(assets/images/app-bg.jpg)">
+    <div class="app-shape-1">
+      <img src="assets/images/shape/app-shape-1.png" alt="shape">
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="app-download-content text-center">
+            <h1 class="app-title wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">下载手机app</h1>
+            <ul>
+              <li><a class="app-store wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" href="#"><img
+                    src="assets/images/app-store.png" alt="app"></a></li>
+              <li><a class="play-store wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" href="#"><img
+                    src="assets/images/play-store.png" alt="play"></a></li>
+            </ul>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="app-shape-2">
+      <img src="assets/images/shape/app-shape-2.png" alt="shape">
+    </div>
+  </section>
+
+
+  <section id="testimonial" class="testimonial-area pt-70">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-xl-5 col-lg-6">
+            <div class="testimonial-left-content mt-45 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+              <div class="section-title">
+                <h6 class="sub-title">客户评价</h6>
+                <h4 class="title">客户对我们的评价</h4>
+              </div>
+              <ul class="testimonial-line">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="text">我们的客户对我们的评价非常高，他们认为我们的服务质量优秀，技术实力强大。</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="testimonial-right-content mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+              <div class="quota">
+                <i class="lni-quotation"></i>
+              </div>
+              <div class="testimonial-content-wrapper testimonial-active">
+                <div class="single-testimonial">
+                  <div class="testimonial-text">
+                    <p class="text">“大福工作室的服务非常好，他们的技术团队非常专业，解决问题迅速，我非常满意。”</p>
+                  </div>
+                  <div class="testimonial-author d-sm-flex justify-content-between">
+                    <div class="author-info d-flex align-items-center">
+                      <div class="author-image">
+                        <img src="assets/images/author-1.jpg" alt="author">
+                      </div>
+                      <div class="author-name media-body">
+                        <h5 class="name">张三</h5>
+                        <span class="sub-title">CEO, 优秀公司</span>
+                      </div>
+                    </div>
+                    <div class="author-review">
+                      <ul class="star">
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- 添加更多的评价 -->
+                <!-- 第二个评价 -->
+                <div class="single-testimonial">
+                  <div class="testimonial-text">
+                    <p class="text">“我对大福工作室的服务非常满意，他们的团队非常专业，解决问题迅速。”</p>
+                  </div>
+                  <div class="testimonial-author d-sm-flex justify-content-between">
+                    <div class="author-info d-flex align-items-center">
+                      <div class="author-image">
+                        <img src="assets/images/author-2.jpg" alt="author">
+                      </div>
+                      <div class="author-name media-body">
+                        <h5 class="name">李四</h5>
+                        <span class="sub-title">CTO, 优秀公司</span>
+                      </div>
+                    </div>
+                    <div class="author-review">
+                      <ul class="star">
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- 第三个评价 -->
+                <div class="single-testimonial">
+                  <div class="testimonial-text">
+                    <p class="text">“大福工作室的服务超出了我的期望，他们的团队非常专业，解决问题迅速。”</p>
+                  </div>
+                  <div class="testimonial-author d-sm-flex justify-content-between">
+                    <div class="author-info d-flex align-items-center">
+                      <div class="author-image">
+                        <img src="assets/images/author-3.jpg" alt="author">
+                      </div>
+                      <div class="author-name media-body">
+                        <h5 class="name">王五</h5>
+                        <span class="sub-title">CEO, 优秀公司</span>
+                      </div>
+                    </div>
+                    <div class="author-review">
+                      <ul class="star">
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- 第四个评价 -->
+                <div class="single-testimonial">
+                  <div class="testimonial-text">
+                    <p class="text">“我对大福工作室的服务非常满意，他们的团队非常专业，解决问题迅速。”</p>
+                  </div>
+                  <div class="testimonial-author d-sm-flex justify-content-between">
+                    <div class="author-info d-flex align-items-center">
+                      <div class="author-image">
+                        <img src="assets/images/author-4.jpg" alt="author">
+                      </div>
+                      <div class="author-name media-body">
+                        <h5 class="name">赵六</h5>
+                        <span class="sub-title">CTO, 优秀公司</span>
+                      </div>
+                    </div>
+                    <div class="author-review">
+                      <ul class="star">
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- 第五个评价 -->
+                <div class="single-testimonial">
+                  <div class="testimonial-text">
+                    <p class="text">“大福工作室的服务超出了我的期望，他们的团队非常专业，解决问题迅速。”</p>
+                  </div>
+                  <div class="testimonial-author d-sm-flex justify-content-between">
+                    <div class="author-info d-flex align-items-center">
+                      <div class="author-image">
+                        <img src="assets/images/author-5.jpg" alt="author">
+                      </div>
+                      <div class="author-name media-body">
+                        <h5 class="name">孙七</h5>
+                        <span class="sub-title">CEO, 优秀公司</span>
+                      </div>
+                    </div>
+                    <div class="author-review">
+                      <ul class="star">
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                        <li><i class="lni-star"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                ``
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+<section id="blog" class="blog-area pt-115 pb-120">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <div class="section-title text-center pb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6 class="sub-title">我们的博客</h6>
+            <h4 class="title">最新<span>新闻</span></h4>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="single-blog mt-30 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.4s">
+            <div class="blog-image">
+              <a href="blog-details.html"><img src="assets/images/news-1.jpg" alt="news"></a>
+            </div>
+            <div class="blog-content">
+              <h4 class="blog-title"><a href="blog-details.html">在这里插入您的博客标题</a></h4>
+              <div class="blog-author d-flex align-items-center">
+                <div class="author-image">
+                  <img src="assets/images/author-1.jpg" alt="author">
+                </div>
+                <div class="author-content media-body">
+                  <h6 class="sub-title">发布者</h6>
+                  <p class="text">张三</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="single-blog mt-30 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.7s">
+            <div class="blog-image">
+              <a href="blog-details.html"><img src="assets/images/news-2.jpg" alt="news"></a>
+            </div>
+            <div class="blog-content">
+              <h4 class="blog-title"><a href="blog-details.html">在这里插入您的博客标题</a></h4>
+              <div class="blog-author d-flex align-items-center">
+                <div class="author-image">
+                  <img src="assets/images/author-2.jpg" alt="author">
+                </div>
+                <div class="author-content media-body">
+                  <h6 class="sub-title">发布者</h6>
+                  <p class="text">李四</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="single-blog mt-30 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="1s">
+            <div class="blog-image">
+              <a href="blog-details.html"><img src="assets/images/news-3.jpg" alt="news"></a>
+            </div>
+            <div class="blog-content">
+              <h4 class="blog-title"><a href="blog-details.html">在这里插入您的博客标题</a></h4>
+              <div class="blog-author d-flex align-items-center">
+                <div class="author-image">
+                  <img src="assets/images/author-3.jpg" alt="author">
+                </div>
+                <div class="author-content media-body">
+                  <h6 class="sub-title">发布者</h6>
+                  <p class="text">王五</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer id="footer" class="footer-area bg_cover" style="background-image: url(assets/images/footer-bg.jpg)">
+    <div class="footer-shape">
+      <img src="assets/images/shape/footer-shape.png" alt="footer shape">
+    </div>
+    <div class="container">
+      <div class="footer-widget pt-30 pb-70">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 order-sm-1 order-lg-1">
+            <div class="footer-about pt-40 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.3s">
+              <a href="#">
+                <img src="assets/images/logo.png" alt="Logo">
+              </a>
+              <p class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大福工作室，专注于为您提供优质的技术支持和优惠服务。</p>
+              <p class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们的目标是帮助每一位客户实现他们的需求。</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 order-sm-3 order-lg-2">
+            <div class="footer-link pt-40 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="footer-title">
+                <h5 class="title">服务</h5>
+              </div>
+              <ul>
+                <li><a href="#">生活福利</a></li>
+                <li><a href="#">网站开发</a></li>
+                <li><a href="#">商业咨询</a></li>
+                <li><a href="#">应用开发</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 order-sm-4 order-lg-3">
+            <div class="footer-link pt-40 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.7s">
+              <div class="footer-title">
+                <h5 class="title">关于我们</h5>
+              </div>
+              <ul>
+                <li><a href="#">概述</a></li>
+                <li><a href="#">为什么选择我们？</a></li>
+                <li><a href="#">奖项和认可</a></li>
+                <li><a href="#">团队</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 order-sm-2 order-lg-4">
+            <div class="footer-contact pt-40 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.9s">
+              <div class="footer-title">
+                <h5 class="title">联系我们</h5>
+              </div>
+              <div class="contact pt-10">
+                <p class="text">长春财经学院 信息工程学院<br>计算机2234班第一组</p>
+                <p class="text"><a href="mailto:850747737@qq.com" style="color: white;">850747737@qq.com</a></p>
+                <p class="text">+86 139 7167 4209</p>
+                <ul class="social mt-40">
+                  <li><a href="#"><i class="lni-facebook"></i></a></li>
+                  <li><a href="#"><i class="lni-wechat"></i></a></li>
+                  <li><a href="#"><i class="lni-instagram"></i></a></li>
+                  <li><a href="#"><i class="lni-telegram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center">
+        <p class="text">© 2024 <a target="_blank" title="大福工作室">大福工作室</a> 版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+
+
+
+
+
+  <script data-cfasync="false" src="assets/js/email-decode.min.js"></script>
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/slick.min.js"></script>
+
+  <script src="assets/js/ajax-contact.js"></script>
+
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+
+  <script src="assets/js/wow.min.js"></script>
+
+  <script src="assets/js/jquery.easing.min.js"></script>
+  <script src="assets/js/scrolling-nav.js"></script>
+
+  <script src="assets/js/scrollIt.min.js"></script>
+
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
-<script>
-    window.onload = function() {
-        Swal.fire({
-            title: "欢迎来到大福工作室",
-            text: "本工作室主旨为大学生们提供便捷服务，内涵低价充话费，代写文章，讲解程序设计题等等服务，欢迎来选购~",
-            imageUrl: "https://img1.imgtp.com/2023/08/21/l4BRZSFL.png",
-            imageWidth: 200,
-            imageHeight: 250,
-            imageAlt: "欢迎图片",
-            confirmButtonText: "确认"
-        });
-    };
-
-    function showProductDetails(productName, productPrice, productImage, notes) {
-        Swal.fire({
-            title: productName,
-            html: `
-                <img src="${productImage}" style="max-width: 100%; height: auto;">
-                <p>价格：${productPrice}</p>
-                <p>${notes}</p>
-            `,
-            confirmButtonText: "返回",
-            confirmButtonColor: '#3085d6'
-        });
-    }
-
-    const detailButtons = document.querySelectorAll('.fileinput-button');
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const productCard = this.closest('.product-card');
-            if (productCard) {
-                const productImage = productCard.querySelector('img').src;
-                const productName = productCard.querySelector('.product-name').textContent;
-                const productPrice = productCard.querySelector('.product-price').textContent;
-                let notes = "这里是一些注意事项...";
-
-                // 添加根据商品不同显示不同的注意事项
-                if (productName.includes("程序题（可供源码+讲解）")) {
-                    notes = "支持JavaScript Java Python C C++ C# HTML等编程语言的题目讲解(也可直接给答案)，可以代做期末设计等等<br>根据题目类型，难度，以及额外增加服务（包括但不限于心得体会代写,程序框架图等）定价格";
-                } else if (productName.includes("招代理！可赚取大量生活费！")) {
-                    notes = "代理可以把客户介绍到我这边来，根据客户下单内容，获取不同的提成，例如网课是10%的提成，结单10元，你获得1元报酬，具体不同提成加我联系方式私聊！";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }else if (productName.includes("程序设计定制")) {
-                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
-                }
-
-                showProductDetails(productName, productPrice, productImage, notes);
-            }
-        });
-    });
-
-    function ok() {
-    Swal.fire({
-        title: "客服联系方式：",
-        html: "<img src='https://img1.imgtp.com/2023/09/12/RLNo209I.png' style='max-width: 100%; max-height: 100%;' /><br>QQ：960798516<br>wx：Wang960798516<br>扫码付款时请注意备注好个人信息！！！<br>（商品内容*数量+个人联系方式）！！！<br>工作室收到您的需求后将会联系您~",
-        icon: "success",
-        confirmButtonText: "确定"
-    }); 
-}
-
-</script>
