@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8">
+<title>大福工作室</title>
+<link rel="stylesheet" href="http://localhost:/Web_meiTuan/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+/* 按钮 添加 */
+.fileinput-button {
+	position: relative;
+	display: inline-block;
+	background: #FF6C00;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 30px;
+	overflow: hidden;
+	color: white;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+	font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fileinput-button:hover {
+	background: #FF8900;
+}
+
+/* 主页背景颜色 */
+body {
+    background-color: #F8F8F8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message img {
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.product-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    width: 200px;
+    height: 350px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.product-price {
+    color: #696969;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>欢迎来到大福工作室</h1>
+            <p>本工作室主旨为大学生们提供便捷服务，包括低价充话费、代写文章、讲解程序设计题等等服务，欢迎来选购~</p>
+            <img src="https://z1.ax1x.com/2023/11/07/pil2tOA.png"><!--工作室宣传图片 imgse图床-->
+        </div>
+        <div class="product-list">
+            <!-- 招代理 -->
+            <div class="product-card">
+                <img src="https://img1.imgtp.com/2023/09/12/7hU3IOH5.png">
+                <div class="product-details">
+                    <div class="product-name">招代理！可赚取大量生活费！</div>
+                    <div class="product-price">1000元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片1 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/hPTGGQVZ/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">程序题<br>（可供源码+讲解）</div>
+                    <div class="product-price">5元起</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片2 -->
+            <div class="product-card">
+                <img src="https://img1.imgtp.com/2023/09/12/jZZhxjv5.png">
+                <div class="product-details">
+                    <div class="product-name">程序设计定制</div>
+                    <div class="product-price">10元起</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片3 -->
+            <div class="product-card">
+                <img src="https://img1.imgtp.com/2023/09/14/bOTtyYvN.jpg">
+                <div class="product-details">
+                    <div class="product-name">刷课</div>
+                    <div class="product-price">6元起<br>越多越便宜！</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片4 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">文章代笔</div>
+                    <div class="product-price">论文，演讲稿，应用文等<br>5元起</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片6 -->
+            <div class="product-card">
+                <img src="https://img1.imgtp.com/2023/09/12/zQQTfwJU.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔可赠道具衣服8折</div>
+                    <div class="product-price">1.6元起</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片7 -->
+            <div class="product-card">
+                <img src="https://img1.imgtp.com/2023/09/14/Cu9QXnKd.jpg">
+                <div class="product-details">
+                    <div class="product-name">蛋仔赛季手册9折</div>
+                    <div class="product-price">27元起</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片31 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">王者荣耀98折点卷</div>
+                    <div class="product-price">0.98元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片32 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">和平精英98折点卷</div>
+                    <div class="product-price">0.98元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            <!-- 商品卡片33 -->
+            <div class="product-card">
+                <img src="https://i.postimg.cc/7PC6pWhk/image.jpg">
+                <div class="product-details">
+                    <div class="product-name">话费充值97折</div>
+                    <div class="product-price">97元</div>
+                    <input type="button" value="详情" class="fileinput-button">
+                </div>
+            </div>
+            
+            <!-- ... 其他商品卡片 ... -->
+        </div>
+        <div class="contact-info">
+            <h4>客服联系方式：QQ（960798516） wx（Wang960798516）</h4>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <input type="submit" class="btn fileinput-button" value="去下单" onclick="ok();">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    window.onload = function() {
+        Swal.fire({
+            title: "欢迎来到大福工作室",
+            text: "本工作室主旨为大学生们提供便捷服务，内涵低价充话费，代写文章，讲解程序设计题等等服务，欢迎来选购~",
+            imageUrl: "https://img1.imgtp.com/2023/08/21/l4BRZSFL.png",
+            imageWidth: 200,
+            imageHeight: 250,
+            imageAlt: "欢迎图片",
+            confirmButtonText: "确认"
+        });
+    };
+
+    function showProductDetails(productName, productPrice, productImage, notes) {
+        Swal.fire({
+            title: productName,
+            html: `
+                <img src="${productImage}" style="max-width: 100%; height: auto;">
+                <p>价格：${productPrice}</p>
+                <p>${notes}</p>
+            `,
+            confirmButtonText: "返回",
+            confirmButtonColor: '#3085d6'
+        });
+    }
+
+    const detailButtons = document.querySelectorAll('.fileinput-button');
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productCard = this.closest('.product-card');
+            if (productCard) {
+                const productImage = productCard.querySelector('img').src;
+                const productName = productCard.querySelector('.product-name').textContent;
+                const productPrice = productCard.querySelector('.product-price').textContent;
+                let notes = "这里是一些注意事项...";
+
+                // 添加根据商品不同显示不同的注意事项
+                if (productName.includes("程序题（可供源码+讲解）")) {
+                    notes = "支持JavaScript Java Python C C++ C# HTML等编程语言的题目讲解(也可直接给答案)，可以代做期末设计等等<br>根据题目类型，难度，以及额外增加服务（包括但不限于心得体会代写,程序框架图等）定价格";
+                } else if (productName.includes("招代理！可赚取大量生活费！")) {
+                    notes = "代理可以把客户介绍到我这边来，根据客户下单内容，获取不同的提成，例如网课是10%的提成，结单10元，你获得1元报酬，具体不同提成加我联系方式私聊！";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }else if (productName.includes("程序设计定制")) {
+                    notes = "根据程序类型，设计要求，提供内容等等进行定价。";
+                }
+
+                showProductDetails(productName, productPrice, productImage, notes);
+            }
+        });
+    });
+
+    function ok() {
+    Swal.fire({
+        title: "客服联系方式：",
+        html: "<img src='https://img1.imgtp.com/2023/09/12/RLNo209I.png' style='max-width: 100%; max-height: 100%;' /><br>QQ：960798516<br>wx：Wang960798516<br>扫码付款时请注意备注好个人信息！！！<br>（商品内容*数量+个人联系方式）！！！<br>工作室收到您的需求后将会联系您~",
+        icon: "success",
+        confirmButtonText: "确定"
+    }); 
+}
+
+</script>
